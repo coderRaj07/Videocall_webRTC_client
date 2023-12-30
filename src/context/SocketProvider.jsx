@@ -8,8 +8,8 @@ export const useSocket = () => {
   return socket;
 };
 
-const serverUrl = "https://videocallwebrtcserver-production.up.railway.app";
-// const serverUrl = "localhost:8000";  // for local
+// const serverUrl = "https://videocallwebrtcserver-production.up.railway.app:8000";
+const serverUrl = "localhost:8000";  // for local
 export const SocketProvider = (props) => {
   const socket = useMemo(() => io( serverUrl ), []);
 
