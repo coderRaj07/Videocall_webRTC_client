@@ -1,0 +1,14 @@
+/* RoomPage.css */
+
+.video-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* .video {
+  margin: 10px;
+  max-width: 100%;
+  height: 100px; /* Set a specific height for the video elements */
+  margin-left: 20px; /* Add space to the left of the video */
+} */
