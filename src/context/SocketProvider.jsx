@@ -9,7 +9,7 @@ export const useSocket = () => {
 };
 
 export const SocketProvider = (props) => {
-  const socket = useMemo(() => io("localhost:8000" || "videocall_webrtc_server.railway.internal"), []);
+  const socket = useMemo(() => io("localhost:8000" || "videocall_webrtc_server.railway.internal" || "videocallwebrtcserver-production.up.railway.app"), []);
 
   return (
     <SocketContext.Provider value={socket}>
