@@ -92,8 +92,3 @@ Feel free to contribute and enhance this video chat client app. Create issues, s
 
 Happy coding! 🚀👩‍💻👨‍
 
-
----
-
-&copy; 2023 [coderRaj07](https://github.com/coderRaj07)
-
