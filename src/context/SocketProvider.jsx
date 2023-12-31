@@ -8,10 +8,24 @@ export const useSocket = () => {
   return socket;
 };
 
-// const serverUrl = "https://videocallwebrtcserver-production.up.railway.app:8000";
-const serverUrl = "localhost:8000";  // for local
+const serverUrl = "videocallwebrtcserver-production.up.railway.app";
+// const serverUrl = "https://your-railway-app-url.up.railway.app:8000";
+// const serverUrl = "localhost:8000";  // for local
 export const SocketProvider = (props) => {
-  const socket = useMemo(() => io( serverUrl ), []);
+  const socket = useMemo(() => {
+    const newSocket = io(serverUrl);
+
+    // Error handling
+    newSocket.on("connect_error", (error) => {
+      console.error("Socket connection error:", error);
+    });
+
+    newSocket.on("connect_timeout", () => {
+      console.error("Socket connection timeout");
+    });
+
+    return newSocket;
+  }, []);
 
   return (
     <SocketContext.Provider value={socket}>
@@ -19,3 +33,4 @@ export const SocketProvider = (props) => {
     </SocketContext.Provider>
   );
 };
+
