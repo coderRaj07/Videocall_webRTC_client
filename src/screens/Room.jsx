@@ -121,7 +121,7 @@ const RoomPage = () => {
             <h1>My Stream</h1>
             <ReactPlayer
               playing
-              muted
+              // muted
               url={myStream}
               style={{ marginLeft: "33%" }}
             />
@@ -132,7 +132,7 @@ const RoomPage = () => {
             <h1>Remote Stream</h1>
             <ReactPlayer
               playing
-              muted
+              // muted
               url={remoteStream}
               style={{ marginLeft: "33%" }}
             />
