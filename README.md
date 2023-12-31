@@ -35,13 +35,13 @@ To experience the app in production, visit the deployed [Video Call WebRTC App](
 
 Make sure you have Node.js and npm installed on your local machine.
 
-1. Clone the client repository:
+1. Clone the [client repository](https://github.com/coderRaj07/Videocall_webRTC_client):
 
    ```bash
    git clone https://github.com/coderRaj07/Videocall_webRTC_client.git
    ```
 
-2. Clone the server repository:
+2. Clone the [server repository](https://github.com/coderRaj07/Videocall_webRTC_Server):
 
    ```bash
    git clone https://github.com/coderRaj07/Videocall_webRTC_Server.git
