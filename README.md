@@ -88,7 +88,7 @@ const socket = io("http://localhost:8000"); // Update the URL to match your loca
 
 ## 🤖 Contribution
 
-Feel free to contribute and enhance this video chat server. Create issues, submit pull requests, and let's make this project even more awesome together!
+Feel free to contribute and enhance this video chat client app. Create issues, submit pull requests, and let's make this project even more awesome together!
 
 Happy coding! 🚀👩‍💻👨‍
 
