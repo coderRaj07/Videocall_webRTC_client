@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Video Call WebRTC App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Video Call WebRTC App! This application allows you to establish video calls between two users using WebRTC and Socket.IO.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Production](#production)
+  - [Demo](#demo)
+  - [Instructions](#instructions)
+- [Local Usage](#local-usage)
+  - [Installation](#installation)
+  - [Running the App](#running-the-app)
+  - [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Production
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To experience the app in production, you can visit the [Video Call WebRTC App](https://videocall-web-rtc-client.vercel.app/) deployed on Vercel.
 
-### `npm test`
+### Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Open the production app link (https://videocall-web-rtc-client.vercel.app/) in two tabs, either in the same browser, different browsers, or two different devices.
+2. In the first tab, enter a random email ID and choose any room ID.
+3. In the second tab, enter another random email ID with the same room ID used in the first tab.
+4. Click "Join" on both tabs.
+5. In the first tab, you will see an option to initiate a call. Click on it.
+6. After clicking "Call," you will be able to see the video. Click on "Send Stream" to see the other person's video.
 
-### `npm run build`
+## Local Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Make sure you have Node.js and npm installed on your local machine.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the [client repository](https://github.com/coderRaj07/Videocall_webRTC_client):
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/coderRaj07/Videocall_webRTC_client.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Clone the [server repository](https://github.com/coderRaj07/Videocall_webRTC_Server):
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   git clone https://github.com/coderRaj07/Videocall_webRTC_Server.git
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Install dependencies for both the client and server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   cd Videocall_webRTC_client
+   npm install
 
-## Learn More
+   cd ../Videocall_webRTC_Server
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Running the App
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Start the server:
 
-### Code Splitting
+   ```bash
+   cd Videocall_webRTC_Server
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   The server will run on `http://localhost:8000`.
 
-### Analyzing the Bundle Size
+2. Start the client:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   cd Videocall_webRTC_client
+   npm start
+   ```
 
-### Making a Progressive Web App
+   The client will run on `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Configuration
 
-### Advanced Configuration
+Update the `serverUrl` in `socketProvider.jsx` within the client app to use the local server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```javascript
+// In Videocall_webRTC_client/src/contexts/socketProvider.jsx
+const socket = io("http://localhost:8000"); // Update the URL to match your local server
+```
 
-### Deployment
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Contributions are welcome! Feel free to open issues and pull requests.
 
-### `npm run build` fails to minify
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+&copy; 2023 [coderRaj07](https://github.com/coderRaj07)
+```
